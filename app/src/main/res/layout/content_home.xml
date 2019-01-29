@@ -1,26 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Home"
-    tools:showIn="@layout/home">
+    tools:showIn="@layout/home"
+    >
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/chooseOption"
+    <android.support.constraint.Guideline
+        android:id="@+id/guide1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"/>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/listItems"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent=".3333333333333333333"
+        android:orientation="vertical"/>
+    <android.support.constraint.Guideline
+        android:id="@+id/guide2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        />
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent=".6666666666666666666"
+        android:orientation="vertical"/>
+    <android.support.constraint.Guideline
+        android:id="@+id/guide3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintGuide_percent="1"
+        android:orientation="vertical"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/chooseOption1"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/guide1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
-</RelativeLayout>
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/chooseOption2"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/guide3"
+        app:layout_constraintStart_toStartOf="@+id/guide2"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/chooseOption3"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="8dp"
+
+        app:layout_constraintEnd_toStartOf="@+id/guide2"
+        app:layout_constraintStart_toStartOf="@+id/guide1"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignStart="@+id/chooseOption1"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseOption1"
+        card_view:cardCornerRadius="4dp">
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="match_parent"
+            android:layout_height="98dp" />
+    </android.support.v7.widget.CardView>
+
+
+
+</android.support.constraint.ConstraintLayout>

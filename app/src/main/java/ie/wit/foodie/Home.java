@@ -15,11 +15,11 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import adapters.OptionsRecyclerViewAdapter;
+import adapters.OptionsCardViewAdapter;
 
-public class Home extends AppCompatActivity implements OptionsRecyclerViewAdapter.ItemClickListener {
+public class Home extends AppCompatActivity implements OptionsCardViewAdapter.ItemClickListener {
 
-    private OptionsRecyclerViewAdapter adapter;
+    private OptionsCardViewAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,26 +38,26 @@ public class Home extends AppCompatActivity implements OptionsRecyclerViewAdapte
         });
 
         // data to populate the RecyclerView with
-        ArrayList<Integer> viewColors = new ArrayList<>();
-        viewColors.add(Color.GRAY);
-        viewColors.add(Color.LTGRAY);
-        viewColors.add(Color.GRAY);
+        //ArrayList<Integer> viewColors = new ArrayList<>();
+        //viewColors.add(Color.GRAY);
+        //.add(Color.LTGRAY);
+        //viewColors.add(Color.GRAY);
 
 
-        ArrayList<String> animalNames = new ArrayList<>();
-        animalNames.add("New Item");
-        animalNames.add("Search");
-        animalNames.add("Info");
+        //ArrayList<String> animalNames = new ArrayList<>();
+       // animalNames.add("New Item");
+        //animalNames.add("Search");
+       // animalNames.add("Info");
 
-
+        //TODO... Note reuse later for recycler view::::::
         // set up the RecyclerView
-        RecyclerView recyclerView = findViewById(R.id.chooseOption);
-        LinearLayoutManager horizontalLayoutManager
-                = new LinearLayoutManager(Home.this, LinearLayoutManager.HORIZONTAL, false);
-        recyclerView.setLayoutManager(horizontalLayoutManager);
-        adapter = new OptionsRecyclerViewAdapter(this, viewColors, animalNames);
-        adapter.setClickListener(this);
-        recyclerView.setAdapter(adapter);
+        //RecyclerView recyclerView = findViewById(R.id.chooseOption);
+       // LinearLayoutManager horizontalLayoutManager
+        //        = new LinearLayoutManager(Home.this, LinearLayoutManager.HORIZONTAL, false);
+        //recyclerView.setLayoutManager(horizontalLayoutManager);
+       // adapter = new OptionsCardViewAdapter(this, viewColors, animalNames);
+       // adapter.setClickListener(this);
+       // recyclerView.setAdapter(adapter);
     }
 
     @Override

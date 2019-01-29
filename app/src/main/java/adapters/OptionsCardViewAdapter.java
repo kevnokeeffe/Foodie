@@ -13,7 +13,7 @@ import java.util.List;
 
 import ie.wit.foodie.R;
 
-public class OptionsRecyclerViewAdapter extends RecyclerView.Adapter<OptionsRecyclerViewAdapter.ViewHolder> {
+public class OptionsCardViewAdapter extends RecyclerView.Adapter<OptionsCardViewAdapter.ViewHolder> {
 
     private List<Integer> mViewColors;
     private List<String> mAnimals;
@@ -21,7 +21,7 @@ public class OptionsRecyclerViewAdapter extends RecyclerView.Adapter<OptionsRecy
     private ItemClickListener mClickListener;
 
     // data is passed into the constructor
-    public OptionsRecyclerViewAdapter(Context context, List<Integer> colors, List<String> animals) {
+    public OptionsCardViewAdapter(Context context, List<Integer> colors, List<String> animals) {
         this.mInflater = LayoutInflater.from(context);
         this.mViewColors = colors;
         this.mAnimals = animals;

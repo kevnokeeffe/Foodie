@@ -15,13 +15,13 @@
         android:id="@+id/guide1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintGuide_percent=".3333333333333333333"
+        app:layout_constraintGuide_percent=".339"
         android:orientation="vertical"/>
     <android.support.constraint.Guideline
         android:id="@+id/guide2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintGuide_percent=".6666666666666666666"
+        app:layout_constraintGuide_percent=".669"
         android:orientation="vertical"/>
     <android.support.constraint.Guideline
         android:id="@+id/guide3"
@@ -35,17 +35,19 @@
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="2dp"
         app:layout_constraintEnd_toStartOf="@+id/guide1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
         <ImageButton
+            android:id="@+id/addBeer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:onClick="add"
             android:text="Hello" />
 
 
@@ -58,7 +60,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginLeft="2dp"
         app:layout_constraintEnd_toStartOf="@+id/guide3"
         app:layout_constraintStart_toStartOf="@+id/guide2"
         app:layout_constraintTop_toTopOf="parent">
@@ -76,8 +78,8 @@
         android:id="@+id/chooseOption3"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
         android:layout_marginTop="8dp"
 
         app:layout_constraintEnd_toStartOf="@+id/guide2"
@@ -100,7 +102,7 @@
         android:layout_alignStart="@+id/chooseOption1"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +112,9 @@
         <TextView
             android:id="@+id/info_text"
             android:layout_width="match_parent"
-            android:layout_height="98dp" />
+            android:layout_height="98dp"
+
+            android:padding="10dp"/>
     </android.support.v7.widget.CardView>
 
 

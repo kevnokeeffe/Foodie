@@ -82,4 +82,5 @@ public class OptionsCardViewAdapter extends RecyclerView.Adapter<OptionsCardView
     public interface ItemClickListener {
         void onItemClick(View view, int position);
     }
+
 }

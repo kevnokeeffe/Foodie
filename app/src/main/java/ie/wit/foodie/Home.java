@@ -1,5 +1,6 @@
 package ie.wit.foodie;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -20,13 +22,21 @@ import adapters.OptionsCardViewAdapter;
 public class Home extends AppCompatActivity implements OptionsCardViewAdapter.ItemClickListener {
 
     private OptionsCardViewAdapter adapter;
-
+    private Button addButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        /*addButton = new Button(this);
+        final Button button = findViewById(R.id.addBeer);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+            }
+        });*/
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -37,27 +47,22 @@ public class Home extends AppCompatActivity implements OptionsCardViewAdapter.It
             }
         });
 
-        // data to populate the RecyclerView with
-        //ArrayList<Integer> viewColors = new ArrayList<>();
-        //viewColors.add(Color.GRAY);
-        //.add(Color.LTGRAY);
-        //viewColors.add(Color.GRAY);
 
-
-        //ArrayList<String> animalNames = new ArrayList<>();
-       // animalNames.add("New Item");
-        //animalNames.add("Search");
-       // animalNames.add("Info");
 
         //TODO... Note reuse later for recycler view::::::
-        // set up the RecyclerView
-        //RecyclerView recyclerView = findViewById(R.id.chooseOption);
-       // LinearLayoutManager horizontalLayoutManager
+        //set up the RecyclerView
+       // RecyclerView recyclerView = findViewById(R.id.chooseOption);
+       //LinearLayoutManager horizontalLayoutManager
         //        = new LinearLayoutManager(Home.this, LinearLayoutManager.HORIZONTAL, false);
         //recyclerView.setLayoutManager(horizontalLayoutManager);
        // adapter = new OptionsCardViewAdapter(this, viewColors, animalNames);
        // adapter.setClickListener(this);
        // recyclerView.setAdapter(adapter);
+    }
+
+    public void add(View v)
+    {
+        startActivity(new Intent(this,Add.class));
     }
 
     @Override

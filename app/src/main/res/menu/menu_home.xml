@@ -6,5 +6,24 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
+        app:showAsAction="never"/>
+    <item android:id="@+id/menu_help"
+        android:title="Help"
+        android:orderInCategory="100"
+        android:onClick="menuHelp"
         app:showAsAction="never" />
+
+    <item android:id="@+id/menu_info"
+        android:title="Info"
+        android:orderInCategory="100"
+        android:onClick="menuInfo"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/home"
+        android:onClick="menuHome"
+        android:orderInCategory="100"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
 </menu>

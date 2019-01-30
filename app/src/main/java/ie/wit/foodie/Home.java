@@ -18,8 +18,9 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import adapters.OptionsCardViewAdapter;
+import ie.cm.activities.Base;
 
-public class Home extends AppCompatActivity implements OptionsCardViewAdapter.ItemClickListener {
+public class Home extends Base implements OptionsCardViewAdapter.ItemClickListener {
 
     private OptionsCardViewAdapter adapter;
     private Button addButton;

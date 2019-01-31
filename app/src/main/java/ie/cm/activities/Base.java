@@ -1,7 +1,8 @@
 package ie.cm.activities;
 
 
-import ie.wit.foodie.Home;
+import ie.cm.models.CraftBeer;
+import ie.wit.craftBeer.Home;
 import ie.wit.foodie.R;
 
 import android.app.AlertDialog;
@@ -11,7 +12,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 public class Base extends AppCompatActivity {
+
+    public static ArrayList<CraftBeer> beerList = new ArrayList<CraftBeer>();
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

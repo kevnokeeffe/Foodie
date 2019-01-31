@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Add">
+    tools:context="ie.wit.craftBeer.Add">
 
     <TextView
         android:id="@+id/addfooter"
@@ -81,7 +81,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="Enter Coffee Name"
+        android:hint="Enter Bar Name"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,12 +109,12 @@
         app:layout_constraintVertical_bias="0.296" />
 
     <EditText
-        android:id="@+id/addShopET"
+        android:id="@+id/addPubET"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:ems="10"
-        android:hint="Enter Shop"
+        android:hint="Enter Bar"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/addPriceET"
         app:layout_constraintEnd_toEndOf="parent"
@@ -141,6 +141,7 @@
         android:layout_height="84dp"
         android:background="@color/colorFontOffWhite"
         android:drawableTop="@drawable/blue_add_48"
+        android:onClick="addBeer"
         android:text="@string/addCoffeeBtnLbl"
         app:layout_constraintBottom_toTopOf="@+id/addfooter"
         app:layout_constraintEnd_toEndOf="parent"

@@ -7,8 +7,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Home"
+    tools:context="ie.wit.craftBeer.Home"
     tools:showIn="@layout/home"
+    android:background="@color/colorBackground"
     >
 
     <android.support.constraint.Guideline
@@ -48,6 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="add"
+            android:background="@drawable/beer_add"
             android:text="Hello" />
 
 
@@ -69,7 +71,9 @@
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Hello" />
+            android:text="Hello"
+            android:background="@drawable/menu_dark"
+            />
 
 
     </android.support.v7.widget.CardView>
@@ -90,19 +94,20 @@
         <ImageButton
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Hello" />
+            android:text="Hello"
+            android:background="@drawable/menu_light"/>
 
 
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/card_view"
+        android:id="@+id/card_view_listing"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_alignStart="@+id/chooseOption1"
         android:layout_gravity="center"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="98dp"
 
-            android:padding="10dp"/>
+            android:padding="10dp" />
     </android.support.v7.widget.CardView>
 
 
